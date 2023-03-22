@@ -1,0 +1,135 @@
+/*
+ * @Description: 视频墙的css
+ * @Author: yangsen
+ * @Date: 2022-11-14 16:30:50
+ * @LastEditors: yangsen
+ * @LastEditTime: 2022-11-15 14:28:22
+ */
+
+.wall-container *,
+.wall-container ::after,
+.wall-container ::before {
+  box-sizing: border-box;
+}
+.wall-container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.wall-container .grid-wrapper {
+  height: 100%;
+  margin: 0px;
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wall-container .container-fluid {
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.wall-container .grid-wrapper .player {
+  padding: 0px;
+  position: relative;
+  border: 2px solid #000;
+  background-image: url(../img/blue.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wall-container .grid-wrapper .player.select {
+  border: 2px solid rgb(3, 253, 3);
+}
+
+.wall-container .grid-wrapper .player.grid-9 {
+  width: 33.33%;
+  height: 33.33%;
+}
+
+.wall-container .grid-wrapper .player.grid-6 {
+  width: 50%;
+  height: 33.34%;
+}
+
+.wall-container .grid-wrapper .player:not(.empty) {
+  background: #343a40;
+}
+
+.wall-container .grid-wrapper .player video.video-class {
+  background: #000;
+  object-fit: fill;
+}
+
+.grid-wrapper .player video {
+  height: 100%;
+  width: 100%;
+}
+
+.wall-container .content-wrapper {
+  height: 100%;
+  background: transparent;
+}
+
+.wall-container .grid-wrapper .player video.video-class.empty {
+  background: transparent;
+}
+
+.wall-container .player .close {
+  width: 100%;
+  height: 100%;
+}
+
+.wall-container .close-stream-btn {
+  position: absolute;
+  right: 0.5vw;
+  top: 0.5vw;
+  height: 0.5vw;
+  width: 0.5vw;
+  color: white;
+  cursor: pointer;
+  display: none;
+  filter: drop-shadow(2px 4px 6px black);
+  z-index: 9;
+}
+
+.wall-container .player .loader {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  top: calc(50% - 35px);
+  left: calc(50% - 50px);
+}
+
+.wall-container .d-none {
+  display: none;
+}
+
+.wall-container .grid-wrapper .player:not(.empty):hover .close-stream-btn {
+  display: block;
+}
+
+.wall-container .grid-wrapper.full {
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 单个视屏的半屏状态 */
+.wall-container .grid-wrapper .player.full-screen-1 {
+  width: 100%;
+  height: 66.66%;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+/* 单个视频的全屏状态 */
+.wall-container .grid-wrapper .player.full-screen-0 {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(0, 0, 0);
+}

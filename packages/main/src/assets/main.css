@@ -1,0 +1,120 @@
+@import "./css/deviceLog.css";
+@import "./css/operationLog.css";
+@import "./css/systemConfig.css";
+@import "./css/layerManage.css";
+@import "./css/warnQuery.css";
+@import "./css//about.css";
+@import "./css/defenceManage.css";
+@import "./css/relieve.css";
+@import "./css/historyWarn.css";
+@import "./css/map.css";
+@import "./css/video.css";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* html {
+  font-size: 16px;
+} */
+li {
+  list-style-type: none;
+}
+/* -----------------element部分-------------------------------- */
+/* 下拉选择框 */
+.el-popper {
+  border: none !important;
+}
+.el-select-dropdown {
+  background-color: #112859;
+}
+.el-select-dropdown__item {
+  color: #97d0f6;
+}
+.el-select-dropdown__item.selected {
+  background-color: #112859;
+}
+.el-select-dropdown__item:hover {
+  background-color: #17377a !important;
+}
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background-color: #17377a !important;
+}
+/* 全局日期时间选择器 */
+.el-date-picker {
+  color: #97d0f6;
+  background-color: #112859;
+}
+.el-time-panel {
+  color: #97d0f6 !important;
+  background-color: #112859 !important;
+}
+.el-time-spinner__item {
+  color: #97d0f6 !important;
+}
+.el-time-spinner__item.is-active {
+  color: #0295f6 !important;
+}
+.el-time-panel__btn {
+  color: #97d0f6 !important;
+}
+.el-time-spinner__item:hover:not(.is-disabled):not(.is-active) {
+  background-color: #08979c;
+}
+.el-picker-panel__footer {
+  background-color: #112859;
+}
+.el-picker-panel__footer .is-text {
+  color: #97d0f6;
+}
+.el-picker-panel__footer .is-text:hover {
+  background-color: #18376e !important;
+}
+.el-picker-panel__footer .el-button {
+  color: #97d0f6;
+  background-color: #18376e;
+  border: none;
+}
+.el-input__wrapper {
+  background-color: #112859;
+}
+.el-input__wrapper .el-input__inner {
+  color: #97d0f6;
+}
+/* 下拉菜单 */
+.subMenu .el-menu--popup {
+  min-width: 80px;
+}
+.subMenu .el-menu-item {
+  font-size: 14px;
+}
+
+/* 历史告警查询 */
+.historyWarn .nameList {
+  position: absolute;
+  right: -21px;
+}

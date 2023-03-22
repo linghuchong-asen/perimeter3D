@@ -1,0 +1,39 @@
+.systemConfig .el-dialog__close {
+  display: none;
+}
+.systemConfig .el-dialog {
+  height: 360px;
+  min-width: 450px;
+  background-image: url("/image/mapbg_proprety_layer.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-shadow: none;
+  color: #97d0f6;
+}
+.systemConfig .el-dialog__body {
+  width: 85%;
+  height: 63%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #18376e;
+}
+.systemConfig .el-form-item__label {
+  width: 160px !important;
+  color: #97d0f6;
+}
+
+.systemConfig .el-input-number__decrease,
+.systemConfig .el-input-number__increase {
+  background-color: #18376e;
+  color: #97d0f6;
+  /* border-top: 1px solid #a9b1c2 !important; */
+}
+
+/* 查询按钮 */
+.systemConfig .el-button--primary {
+  position: relative;
+  left: 300px;
+  bottom: -10px;
+}

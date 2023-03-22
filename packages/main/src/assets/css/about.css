@@ -1,0 +1,23 @@
+.about .el-dialog__close {
+  display: none;
+}
+.about .el-dialog {
+  height: 240px;
+  width: 350px;
+  background-image: url("/image/pop2.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-shadow: none;
+  color: #97d0f6;
+}
+.about .el-dialog__body {
+  width: 83%;
+  height: 43%;
+  margin-left: 50%;
+  margin-top: 3%;
+  transform: translateX(-50%);
+  background-color: #18376e;
+  color: #97d0f6;
+}

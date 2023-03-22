@@ -1,0 +1,155 @@
+/*
+ * @Description: 防区管理样式
+ * @Author: yangsen
+ * @Date: 2022-11-04 15:13:44
+ * @LastEditors: yangsen
+ * @LastEditTime: 2022-12-07 20:38:58
+ */
+/* 防区管理 */
+.defence .el-dialog {
+  background-image: url("/image/mapbg_layer.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-shadow: none;
+  color: #97d0f6;
+  min-height: 650px;
+  min-width: 1150px;
+}
+.defence .el-dialog .el-dialog__headerbtn {
+  display: none;
+}
+.defence .el-dialog .el-dialog__header {
+  margin-right: 0;
+}
+.defence .el-dialog .el-dialog__body {
+  padding-top: 10px;
+}
+
+.exhibition .is-leaf {
+  background-color: #18376e !important;
+  color: #38c3fd;
+}
+/* .exhibition .el-table__row {
+  background-color: #18376e !important;
+} */
+.exhibition .el-table .working-row {
+  background-color: #b3e19d;
+}
+.exhibition .el-table .notWorking-row {
+  background-color: #f3d19e;
+}
+.exhibition .el-table .byPass-row {
+  background-color: #fab6b6;
+}
+.exhibition .el-table .loseEfficacy-row {
+  background-color: #c8c9cc;
+}
+.exhibition .el-table .warning-row {
+  background-color: #ff4757;
+}
+.exhibition .btn-prev {
+  background-color: #18376e !important;
+}
+.exhibition .btn-next {
+  background-color: #18376e !important;
+}
+.exhibition .number {
+  background-color: rgba(24, 55, 110, 0.8) !important;
+  color: #2ea1d1 !important;
+}
+.exhibition .is-active {
+  background-color: #409eff !important;
+  color: #fff !important;
+}
+.exhibition .el-input__wrapper {
+  background-color: #18376e !important;
+  color: #38c3fd !important;
+}
+.exhibition .el-pagination__jump {
+  color: #38c3fd !important;
+}
+.exhibition .el-input__inner {
+  color: #38c3fd !important;
+}
+/* 防区管理下的防区计划 */
+.defenceDetailDialog .el-dialog {
+  background-color: rgba(9, 34, 68, 1) !important;
+}
+/* .defenceDetailDialog .el-dialog {
+  margin-top: 300px !important;
+} */
+.defenceDetailDialog .el-dialog__headerbtn {
+  display: block !important;
+}
+.defenceDetailDialog .el-dialog__close {
+  color: #38c3fd !important;
+}
+.defenceDetailDialog .el-dialog__title {
+  color: #38c3fd !important;
+}
+.defenceDetailDialog .el-dialog__body {
+  height: 300px;
+}
+/* 防区管理下的参数信息 */
+.paramInfo {
+  color: #38c3fd !important;
+}
+.paramInfo .el-dialog__body {
+  height: auto;
+  color: #38c3fd !important;
+}
+.paramInfo .paddingBottom {
+  padding-bottom: 5px;
+}
+.paramInfo .paramType {
+  border: 1px solid #2280ae;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.paramInfo .linkDevice {
+  border: 1px solid #2280ae;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+.byPass .el-form-item__label {
+  color: #38c3fd;
+}
+.byPass .el-input__wrapper {
+  background-color: transparent;
+}
+.byPassDialog .el-dialog__title {
+  color: #38c3fd !important;
+}
+.byPassDialog .el-dialog {
+  background-color: #092244 !important;
+  background-image: none;
+  min-height: 200px;
+  min-width: 300px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  border-radius: 5px;
+}
+.byPassDialog .el-dialog__headerbtn {
+  display: block !important;
+}
+.byPassDialog .el-dialog__close {
+  color: #38c3fd !important;
+}
+.byPassDialog .el-form-item__label {
+  color: #38c3fd !important;
+}
+.byPassDialog .el-radio-group {
+  margin-top: -4px;
+}
+
+.defenceDetailDialog .el-dialog {
+  background-color: #092244 !important;
+  background-image: none !important;
+  min-height: 300px !important;
+}

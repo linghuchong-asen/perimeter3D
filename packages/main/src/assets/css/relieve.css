@@ -1,0 +1,51 @@
+.relieve .el-dialog__close {
+  display: none;
+}
+.relieve .el-dialog {
+  width: 480px;
+  height: 430px;
+  background-image: url("/image/login_bg.png");
+  background-size: 100% 100%;
+}
+.relieve .el-dialog .myHeader {
+  color: white;
+}
+.relieve .el-dialog .myHeader h4 {
+  width: 200px;
+  font-size: 30px;
+  flex-grow: 2;
+  text-align: center;
+  transform: translate(50%, 200%);
+  font-style: italic;
+}
+.relieve .demo-ruleForm {
+  position: absolute !important;
+  top: 57%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.relieve .demo-ruleForm .el-input__wrapper {
+  background-color: #fff !important;
+  border-radius: 15px !important;
+}
+.relieve .demo-ruleForm .el-input__inner {
+  color: #262626;
+}
+.relieve .el-form-item__content {
+  justify-content: center;
+}
+.relieve .el-form-item__content .el-button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #1342a1;
+}
+.relieve .el-form-item__content.el-button:hover {
+  background-color: #1342a1;
+}
+
+.relieve .el-form-item__content .el-button:focus {
+  background-color: #1342a1;
+}
