@@ -3,7 +3,7 @@
  * @Author: yangsen
  * @Date: 2023-03-10 10:24:44
  * @LastEditors: yangsen
- * @LastEditTime: 2023-03-22 17:34:20
+ * @LastEditTime: 2023-03-23 15:06:11
  */
 import {
   Viewer,
@@ -20,8 +20,8 @@ import {
   PolygonGeometry,
   PolygonMaterial,
   Matrix4,
+  Cartesian3,
 } from "./public/webgis/bundle.module.js";
-import { LBHtoXYZ } from "@main/utils/index.ts";
 
 let viewer, scene, camera;
 export const initMap = (containerId) => {
@@ -57,27 +57,7 @@ export const drawModel = (params) => {
 
     const origin = new Vector3(0, 0, 0);
     origin.applyMatrix4(
-      // new Matrix4()
-      //   .set(
-      //     -0.89403973682751459,
-      //     -0.44798766609515978,
-      //     0.0,
-      //     0.0,
-      //     0.28815567693995897,
-      //     -0.57506633569244747,
-      //     0.76567944689702561,
-      //     0.0,
-      //     -0.34301494839243135,
-      //     0.68454785119805384,
-      //     0.64322234460524208,
-      //     0.0,
-      //     -2190833.0284248837,
-      //     4372200.2465798967,
-      //     4080752.4412706778,
-      //     1.0
-      //   )
-      //   .transpose()
-      LBHtoXYZ(
+      Cartesian3.LBHtoXYZ(
         params.position.longitude,
         params.position.latitude,
         params.position.height
@@ -89,27 +69,7 @@ export const drawModel = (params) => {
     /* 设置相机控制的target */
     viewer.controls.target.set(origin.x, origin.y, origin.z);
   }
-  console.log(
-     new Matrix4()
-        .set(
-          -0.89403973682751459,
-          -0.44798766609515978,
-          0.0,
-          0.0,
-          0.28815567693995897,
-          -0.57506633569244747,
-          0.76567944689702561,
-          0.0,
-          -0.34301494839243135,
-          0.68454785119805384,
-          0.64322234460524208,
-          0.0,
-          -2190833.0284248837,
-          4372200.2465798967,
-          4080752.4412706778,
-          1.0
-        )
-  );
+
   const modelMaterial = new ModelMaterial();
   modelMaterial.url = "http://192.168.0.100:8810/shouan3-2-1png(1).glb";
   viewer.scene.primitives.append(
@@ -120,27 +80,7 @@ export const drawModel = (params) => {
         heading: params.heading,
         pitch: params.pitch,
         roll: params.roll,
-        // matrix: new Matrix4()
-        //   .set(
-        //     -0.89403973682751459,
-        //     -0.44798766609515978,
-        //     0.0,
-        //     0.0,
-        //     0.28815567693995897,
-        //     -0.57506633569244747,
-        //     0.76567944689702561,
-        //     0.0,
-        //     -0.34301494839243135,
-        //     0.68454785119805384,
-        //     0.64322234460524208,
-        //     0.0,
-        //     -2190833.0284248837,
-        //     4372200.2465798967,
-        //     4080752.4412706778,
-        //     1.0
-        //   )
-        //   .transpose(),
-        matrix: LBHtoXYZ(
+        matrix: Cartesian3.LBHtoXYZ(
           params.position.longitude,
           params.position.latitude,
           params.position.height
@@ -156,56 +96,25 @@ export const drawModel = (params) => {
 export const drawElement = (params) => {
   /* 广告牌 */
   const billboardGeometry = new BillboardGeometry();
-  // const elementPosition = LBHtoXYZ(
-  //   params.position.longitude,
-  //   params.position.latitude,
-  //   params.position.height
-  // );
-  // 位置
-  // billboardGeometry.position.set(
-  //   elementPosition.x,
-  //   elementPosition.y,
-  //   elementPosition.z
-  // );
   const billboardMaterial = new BillboardMaterial();
   // console.log("billboardMaterial:", billboardMaterial);
   // 贴图
   billboardMaterial.image = params.url;
   billboardMaterial.text = params.text.text;
-  // billboardMaterial.textFillColor = new Color(
-  //   params.text.fill.x * 255,
-  //   params.text.fill.y * 255,
-  //   params.text.fill.z * 255,
-  //   params.text.fill.w
-  // );
-  billboardMaterial.textFontSize = params.text.fontSize.toString() + "px";
+  billboardMaterial.textFillColor = new Color(
+    params.text.fill.X * 255,
+    params.text.fill.Y * 255,
+    params.text.fill.Z * 255,
+    params.text.fill.W
+  );
+  billboardMaterial.textFontSize = params.text.fontSize;
 
   viewer.scene.primitives.append(
     new Primitive({
       geometryInstances: new GeometryInstance({
         geometry: billboardGeometry,
-        scale: new Vector3(1, 1, 1),
-        // matrix: new Matrix4()
-        //   .set(
-        //     -0.89403999204352436,
-        //     -0.44798715676547574,
-        //     0.0,
-        //     0.0,
-        //     0.28815556060289849,
-        //     -0.57506692149118865,
-        //     0.76567905071268361,
-        //     0.0,
-        //     -0.34301438092366365,
-        //     0.68454769240706093,
-        //     0.64322281621513056,
-        //     0.0,
-        //     -2190831.6391600515,
-        //     4372203.6930374354,
-        //     4080759.6245902968,
-        //     1.0
-        //   )
-        //   .transpose(),
-        matrix: LBHtoXYZ(
+        scale: new Vector3(0.5, 0.5, 0.5),
+        matrix: Cartesian3.LBHtoXYZ(
           params.position.longitude,
           params.position.latitude,
           params.position.height
